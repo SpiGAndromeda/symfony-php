@@ -19,7 +19,7 @@ RUN docker-php-ext-configure intl \
     --with-xpm-dir=/usr/include/
 
 RUN docker-php-ext-install -j$(nproc) gd iconv pdo pdo_mysql pdo_pgsql curl \
-    bcmath mbstring json xml xmlrpc zip intl opcache
+    bcmath mbstring json xml xmlrpc zip intl opcache exif
 
 # Add mcrypt
 RUN yes '' | pecl install -f mcrypt
